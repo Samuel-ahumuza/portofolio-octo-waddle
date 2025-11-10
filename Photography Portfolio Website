@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora | Photography Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for smoother transitions and font application */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F172A; /* Deeper blue-gray */
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #818CF8; /* Indigo-300 for hover */
+        }
+        .portfolio-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(129, 140, 248, 0.3), 0 4px 6px -2px rgba(129, 140, 248, 0.1);
+        }
+    </style>
+</head>
+<body class="text-white bg-gray-900">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm shadow-lg">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-extrabold text-indigo-400 tracking-wider">AURORA</a>
+            <div class="space-x-6 text-sm font-medium hidden md:flex">
+                <a href="#hero" class="nav-link text-white">Home</a>
+                <a href="#portfolio" class="nav-link text-white">Portfolio</a>
+                <a href="#about" class="nav-link text-white">About</a>
+                <a href="#contact" class="nav-link text-white">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-gray-900/95 shadow-xl transition-all duration-300 ease-in-out">
+            <div class="flex flex-col space-y-2 p-4 text-center">
+                <a href="#hero" class="nav-link text-white py-2 border-b border-gray-800">Home</a>
+                <a href="#portfolio" class="nav-link text-white py-2 border-b border-gray-800">Portfolio</a>
+                <a href="#about" class="nav-link text-white py-2 border-b border-gray-800">About</a>
+                <a href="#contact" class="nav-link text-white py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="h-screen flex items-center justify-center text-center px-4" style="background-image: url('https://placehold.co/1920x1080/1F2937/FFFFFF?text=Stunning+Landscape+Photo'); background-size: cover; background-position: center; background-blend-mode: multiply; background-color: rgba(15, 23, 42, 0.6);">
+            <div class="max-w-4xl p-8 bg-gray-900/70 rounded-xl shadow-2xl backdrop-blur-sm">
+                <h1 class="text-6xl sm:text-7xl lg:text-8xl font-black mb-4 tracking-tighter leading-tight text-indigo-300">
+                    Capturing the Unseen
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-300 font-light mb-8">
+                    Fine Art Photography focused on Nature, Architecture, and Light.
+                </p>
+                <a href="#portfolio" class="inline-block px-8 py-3 bg-indigo-500 text-white font-semibold rounded-full shadow-lg hover:bg-indigo-600 transition duration-300 transform hover:scale-105">
+                    View Gallery
+                </a>
+            </div>
+        </section>
+
+        <!-- Portfolio Gallery Section -->
+        <section id="portfolio" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-100">The Collection</h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Item 1: Landscape -->
+                    <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden shadow-xl cursor-pointer">
+                        <img src="https://placehold.co/600x400/1F2937/A5B4FC?text=Landscape+I" alt="A sweeping mountain landscape" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-indigo-300">Alpine Heights</h3>
+                            <p class="text-sm text-gray-400">Series: Nature's Grandeur</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Portrait -->
+                    <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden shadow-xl cursor-pointer">
+                        <img src="https://placehold.co/600x400/374151/FECACA?text=Portrait+II" alt="A stylized studio portrait" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-indigo-300">The Gaze</h3>
+                            <p class="text-sm text-gray-400">Series: Studio Experiments</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Architecture -->
+                    <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden shadow-xl cursor-pointer">
+                        <img src="https://placehold.co/600x400/4B5563/6EE7B7?text=Architecture+III" alt="A modern architectural structure" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-indigo-300">Urban Geometry</h3>
+                            <p class="text-sm text-gray-400">Series: Concrete and Steel</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Abstract -->
+                    <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden shadow-xl cursor-pointer">
+                        <img src="https://placehold.co/600x400/1F2937/FDE68A?text=Abstract+IV" alt="An abstract light painting" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-indigo-300">Woven Light</h3>
+                            <p class="text-sm text-gray-400">Series: Long Exposure</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Street -->
+                    <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden shadow-xl cursor-pointer">
+                        <img src="https://placehold.co/600x400/374151/C4B5FD?text=Street+V" alt="Candid street photography scene" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-indigo-300">Moment in Time</h3>
+                            <p class="text-sm text-gray-400">Series: City Life</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 6: Wildlife -->
+                    <div class="portfolio-item bg-gray-800 rounded-lg overflow-hidden shadow-xl cursor-pointer">
+                        <img src="https://placehold.co/600x400/4B5563/FDBA74?text=Wildlife+VI" alt="A detailed shot of a bird" class="w-full h-64 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-indigo-300">Silent Hunter</h3>
+                            <p class="text-sm text-gray-400">Series: Fauna</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-100">About Aurora</h2>
+
+                <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                    <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                        <img src="https://placehold.co/300x300/6366F1/FFFFFF?text=Portrait" alt="Photographer's portrait" class="w-64 h-64 object-cover rounded-full shadow-2xl border-4 border-indigo-500">
+                    </div>
+                    <div class="md:w-2/3 text-gray-300 text-lg space-y-4">
+                        <p>
+                            I'm **Alex Chen**, a visual artist based in the Pacific Northwest, specializing in capturing the fleeting interplay between light, shadow, and environment. My journey began with a simple film camera and a fascination with the raw beauty of the natural world, which quickly expanded to include urban decay and modern architectural lines.
+                        </p>
+                        <p>
+                            My approach is characterized by a deep commitment to composition and mood. I believe photography is less about documentation and more about interpretation, creating images that resonate with a quiet, dramatic intensity.
+                        </p>
+                        <p>
+                            Feel free to explore my full body of work in the portfolio section, or <a href="#contact" class="text-indigo-400 hover:text-indigo-300 font-medium">get in touch</a> for print inquiries and collaborations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-100">Get in Touch</h2>
+
+                <form class="bg-gray-800 p-8 rounded-xl shadow-2xl space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+                        <input type="text" id="name" name="name" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white" placeholder="John Doe" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white" placeholder="you@example.com" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 text-white" placeholder="I'd love to discuss a project..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-indigo-500 text-white font-semibold rounded-lg hover:bg-indigo-600 transition duration-300 transform hover:scale-[1.01]">
+                        Send Message
+                    </button>
+                </form>
+
+                <div class="text-center mt-8 text-gray-400">
+                    <p>Or find me on social media:</p>
+                    <div class="mt-2 space-x-4">
+                        <a href="#" class="text-indigo-400 hover:text-indigo-300">Instagram</a>
+                        <span class="text-gray-500">|</span>
+                        <a href="#" class="text-indigo-400 hover:text-indigo-300">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 mt-10">
+        <div class="container mx-auto px-4 py-8 text-center text-gray-500 text-sm">
+            &copy; <span id="current-year"></span> Aurora Photography. All rights reserved. | Design by Gemini.
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle and dynamic year in footer
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Mobile menu toggle logic
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked (for smooth scrolling to work)
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    // Check if the link is a navigation link
+                    if (link.getAttribute('href').startsWith('#')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Handle smooth scroll for navigation links (optional, as CSS scroll-smooth is also used)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Simple Form Submission Handler (Prevents default and shows success message)
+            const contactForm = document.querySelector('#contact form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const submitButton = this.querySelector('button[type="submit"]');
+
+                const originalText = submitButton.textContent;
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+
+                // Simulate API call delay
+                setTimeout(() => {
+                    // Display a temporary success message instead of using alert()
+                    const successMessage = document.createElement('p');
+                    successMessage.textContent = 'Message sent successfully! We will get back to you soon.';
+                    successMessage.className = 'mt-4 text-center text-green-400 font-semibold';
+                    contactForm.appendChild(successMessage);
+
+                    submitButton.textContent = 'Message Sent';
+                    // Revert after 3 seconds
+                    setTimeout(() => {
+                        submitButton.textContent = originalText;
+                        submitButton.disabled = false;
+                        contactForm.removeChild(successMessage);
+                        contactForm.reset();
+                    }, 3000);
+
+                }, 1500); // 1.5 second delay
+            });
+        });
+    </script>
+</body>
+</html>
